@@ -1,0 +1,54 @@
+# Site settings
+title: Happy Valley Latin Festival
+email: info@latinvibe.org
+description: >-
+  The Happy Valley Latin Festival is an annual celebration of Latin culture,
+  music, art, and community organized by Latin Vibe nonprofit organization.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - about.md
+  - manual/index.md
+  - organizational-chart.html
+
+# Collections for manual sections
+collections:
+  manual:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "manual"
+    values:
+      layout: "manual"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
